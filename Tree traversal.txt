@@ -1,0 +1,42 @@
+class node:
+    def __init__(self,data):
+        self.left=None
+        self.right=None
+        self.val=data
+        
+    
+def preorder(root):
+    if root:
+        print(str(root.val)+" ->")
+        preorder(root.left)
+        preorder(root.right)
+        
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(str(root.val)+"->")
+        inorder(root.right)
+        
+def postorder(root):
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(str(root.val)+" ->")
+        
+        
+root=node(1)
+root.left=node(2)
+root.right=node(3)
+root.left.left=node(4)
+root.left.right=node(5)
+root.right.left=node(6)
+root.right.right=node(7)
+
+preorder(root)
+print("\n")
+
+
+inorder(root)
+print("\n")
+
+postorder(root)

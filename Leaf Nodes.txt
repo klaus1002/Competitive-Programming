@@ -1,0 +1,43 @@
+class node:
+    def __init__(self,data):
+        self.left=None
+        self.right=None
+        self.val=data
+        
+    
+
+            
+def leaf(root):
+    
+    if not root:
+        return
+    
+    if not root.left and not root.right:
+        print(root.val)
+        
+    if root.left:
+        leaf(root.left)
+        
+    if root.right:
+        leaf(root.right)
+    
+        
+root=node(1)
+root.left=node(2)
+root.right=node(3)
+root.left.left=node(4)
+root.left.right=node(5)
+root.right.left=node(6)
+root.right.right=node(7)
+root.left.left.left=node(4)
+
+#preorder(root)
+print("\t")
+
+
+#inorder(root)
+print("\t")
+
+#postorder(root)
+print("\t")
+leaf(root)

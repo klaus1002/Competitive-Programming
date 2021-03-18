@@ -1,0 +1,21 @@
+l=[]
+min=int()
+max=int()
+
+if len(l)!=0:
+    min=l[0]
+    max=l[0]
+
+
+    for i in l:
+        if i>max:
+            max=i
+
+        if i<min:
+            min=i
+
+    print(max)
+    print(min)
+
+if len(l)==0:
+        print("empty")

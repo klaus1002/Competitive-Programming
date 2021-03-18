@@ -1,0 +1,39 @@
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        
+
+            
+   
+        
+
+
+head=None
+head=node(2)
+second=node(4)
+t=node(5)
+l=node(7)
+
+head.next=second
+second.next=t
+t.next=l
+
+def printlist():
+        temp=head
+        while (temp):
+            print(temp.data)
+            temp=temp.next
+            
+            
+def printmidle():
+    slow=head
+    fast=head
+    while fast and fast.next:
+        slow=slow.next
+        fast=fast.next.next
+    print(slow.data)
+            
+printlist()
+printmidle()
+

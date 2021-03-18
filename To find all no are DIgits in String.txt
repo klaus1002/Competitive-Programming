@@ -1,0 +1,18 @@
+h="39488998"
+j=1
+for i in h:
+    try:
+        int(i)
+        j=j+1
+        
+        
+        
+        
+        
+    except:
+        print(str(i)+"  is not a Digit")
+        break
+    
+    if j==len(h)-1:
+        print("Every element is Digit")
+      

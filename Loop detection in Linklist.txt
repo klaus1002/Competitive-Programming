@@ -1,0 +1,69 @@
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        
+
+            
+   
+        
+
+
+head=None
+head=node(2)
+second=node(4)
+t=node(5)
+l=node(7)
+
+
+head.next=second
+second.next=t
+t.next=l
+l.next=second
+
+def printlist():
+        temp=head
+        while (temp):
+            print(temp.data)
+            temp=temp.next
+            
+            
+            
+def printmidle():
+    slow=head
+    fast=head
+    while fast and fast.next:
+        slow=slow.next
+        fast=fast.next.next
+    print(slow.data)
+    
+def thirdelement():
+    slow=head
+    fast=head
+    fast=fast.next.next
+    while fast and fast.next:
+        slow=slow.next
+        fast=fast.next
+    print(slow.data)
+    
+def findloop():
+    slow=fast=head
+    while (fast and fast.next):
+        fast=fast.next.next
+        slow=slow.next
+        if fast==slow:
+            break
+        
+    slow=head
+    while fast and fast.next:
+        if fast==slow:
+            print(slow.data)
+            break
+        fast=fast.next
+        slow=slow.next
+       
+            
+#printlist()
+#printmidle()
+#thirdelement()
+findloop()

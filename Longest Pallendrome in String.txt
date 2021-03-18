@@ -1,0 +1,33 @@
+def longestPallindrome(str):
+    n=len(str)
+    matrix=[]
+    result=[]
+    for i in range(n):
+        matrix.append([0 for l in range(n)])
+        
+    
+        matrix[i][i]=1
+    
+
+        
+    for col in range(n):
+        for row in range(col):
+            
+            
+            if row==col-1 and str[row]==str[col]:
+                matrix[row][col]=1
+                result.append(str[row:col+1])
+            
+            elif str[row]==str[col] and matrix[row+1][col-1]==1:
+                result.append(str[row:col+1])
+                
+                
+    return(max(result,key=len))
+    
+    
+                
+                
+                
+                
+            
+print(longestPallindrome("wworrrrdr"))
